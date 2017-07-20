@@ -9,7 +9,7 @@ before_install:
 
 script:
     # TODO: execute some queries against the server and make sure
-      they return the correct results.
+    # they return the correct results.
     - echo "Build Success"
 
 after_success:

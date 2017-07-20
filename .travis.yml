@@ -1,0 +1,19 @@
+sudo: required
+
+services:
+    - docker
+
+before_install:
+    - docker build -t ikelewis/docker-bind .
+    - docker run --rm -itd --name bind-dns-server ikelewis/docker-bind
+
+script:
+    # TODO: execute some queries against the server and make sure
+      they return the correct results.
+    - echo "Build Success"
+
+after_success:
+    - if [ "$TRAVIS_BRANCH" == "master" ]; then
+          docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+          docker push ikelewis/docker-bind;
+      fi

@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/IkeLewis/docker-bind.svg?branch=master)](https://travis-ci.org/IkeLewis/docker-bind)
+
 docker-bind
 ===========
 

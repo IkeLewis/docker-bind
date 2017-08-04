@@ -23,7 +23,7 @@ docker-bind combines all logging output and then sends it to standard
 output so that you may take advantage of 'docker logs' for better log
 management.
 
-Command line Usage
+Command Line Usage
 ------------------
 
 Start a caching DNS server on the default docker network.
